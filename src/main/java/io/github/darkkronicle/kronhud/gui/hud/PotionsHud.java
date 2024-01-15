@@ -105,8 +105,9 @@ public class PotionsHud extends TextHudEntry implements DynamicallyPositionable 
 
         RenderSystem.setShaderColor(1, 1, 1, 1);
         context.drawSprite(x, y, 0, 18, 18, sprite);
+
         if (!iconsOnly.getValue()) {
-            drawString(context, client.textRenderer, StatusEffectUtil.getDurationText(effect, 1), x + 19, y + 5,
+            drawString(context, client.textRenderer, StatusEffectUtil.getDurationText(effect, 1, 20), x + 19, y + 5, // what is a tick rate??
                     textColor.getValue().color(), shadow.getValue()
             );
         }
